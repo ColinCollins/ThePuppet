@@ -33,7 +33,7 @@ export default class EventManager {
             cc.log(`事件 ${event} 重复注册`);
             return;
         }
-        this._events[event] = this._events[event]? this._events[event]: [];
+        this._events[event] = this._events[event] ? this._events[event] : [];
         this._events[event].push( {callback, target} );
     }
 
