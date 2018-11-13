@@ -1,12 +1,12 @@
 import AssetManager from './assetMgr';
 import UIManager from './uiMgr';
-import Macro from '../macro';
 import EventManager from './eventMgr';
-
+import Macro from '../macro';
+import AudioSystem from '../util/AudioSystem';
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class gameRoot extends cc.Component {
     onLoad () {
         this.instantiate();
         this.init();
@@ -14,13 +14,15 @@ export default class NewClass extends cc.Component {
     }
 
     instantiate () {
-        window.macro = new Macro();
         window.assetMgr = new AssetManager();
         window.uiMgr = new UIManager();
         window.eventMgr = new EventManager();
+        window.audioSystem = new AudioSystem();
     }
 
     init () {
+        // init the managers
+        window.macro = new Macro();
         window.assetMgr.init();
         window.uiMgr.init();
         window.eventMgr.init();

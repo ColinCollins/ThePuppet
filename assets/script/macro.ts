@@ -8,8 +8,8 @@ export default class Macro {
         SceneMainMenu: 'MainMenu',
         SceneGame: 'Game',
 
-        PanelOption: 'PanelOption',
-        PanelLevelChoice: 'PanelLevelChoice',
-        PanelGameMenu: 'PanelGameMenu',
+        PanelOption: 'Option',
+        PanelLevelChoice: 'LevelChoice',
+        PanelGameMenu: 'GameSetting',
     };
 }
