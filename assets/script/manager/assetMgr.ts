@@ -1,20 +1,24 @@
 const NOTHING_LOADED = 1;
 const PANEL_LOADED = NOTHING_LOADED << 1;
 const SCENE_LOADED = NOTHING_LOADED << 2;
-const FINISH_LOADING = NOTHING_LOADED | PANEL_LOADED | SCENE_LOADED;
+const LEVEL_LOADED = NOTHING_LOADED << 3;
+const FINISH_LOADING = NOTHING_LOADED | PANEL_LOADED | SCENE_LOADED | LEVEL_LOADED;
 
 export default class AssetManager {
 
     private loadingFlag = NOTHING_LOADED;
     private panels = {};
     private scenes = {};
+    // save the level res
+    private levelRes: cc.Prefab[];
 
     init () {
         this._loadPanels();
         this._loadScenes();
+        this._loadLevelRes();
     }
 
-    private _loadPanels () {
+    private _loadPanels (): void {
         cc.loader.loadResDir('panelPrefab', (err, prefabs) => {
             prefabs.forEach((prefab) => {
                 let panel = cc.instantiate(prefab);
@@ -29,7 +33,7 @@ export default class AssetManager {
         });
     }
 
-    private _loadScenes () {
+    private _loadScenes (): void {
         cc.loader.loadResDir('scenePrefab', (err, prefabs) => {
             prefabs.forEach((prefab) => {
                 let scene = cc.instantiate(prefab);
@@ -38,6 +42,21 @@ export default class AssetManager {
             });
             this.loadingFlag |= SCENE_LOADED;
             cc.log('scenes loaded');
+            if (this._isLoadingFinished()) {
+                window.eventMgr.emit(window.macro.Event.LoadFinished);
+            }
+        });
+    }
+
+    private _loadLevelRes (): void {
+        // async
+        cc.loader.loadResDir('levelPrefab', cc.Prefab, (err, res) => {
+            if (err) {
+                cc.error(err);
+            }
+            this.levelRes = res;
+            this.loadingFlag |= LEVEL_LOADED;
+            cc.log('level res loaded');
             if (this._isLoadingFinished()) {
                 window.eventMgr.emit(window.macro.Event.LoadFinished);
             }
@@ -64,5 +83,14 @@ export default class AssetManager {
             return null;
         }
         return scene;
+    }
+
+    getLevelList (): cc.Prefab[] {
+        let res = this.levelRes;
+        if (!res) {
+            cc.warn('No level has been designe.');
+            return [];
+        }
+        return res;
     }
 }

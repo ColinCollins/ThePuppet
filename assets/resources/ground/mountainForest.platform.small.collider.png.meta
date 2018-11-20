@@ -1,0 +1,30 @@
+{
+  "ver": "2.0.0",
+  "uuid": "490d500c-c73e-4e6d-8e96-eec4a9087eea",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "mountainForest.platform.small.collider": {
+      "ver": "1.0.3",
+      "uuid": "383438e1-2df5-4317-bd65-de225156de5f",
+      "rawTextureUuid": "490d500c-c73e-4e6d-8e96-eec4a9087eea",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -4,
+      "trimX": 0,
+      "trimY": 8,
+      "width": 154,
+      "height": 137,
+      "rawWidth": 154,
+      "rawHeight": 145,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
