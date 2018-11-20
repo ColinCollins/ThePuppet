@@ -40,6 +40,9 @@ export default class UIManager {
 
         // 新 panel 入栈
         this._panelStack.push(panel);
+        // if you want to controll the panel or panel's comp you must to get the target. 
+        // return the new panel to controll the comp
+        return panel;
     }
 
     closeCurrentPanel () {

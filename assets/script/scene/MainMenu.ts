@@ -2,7 +2,7 @@ const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class MainMenu extends cc.Component {
-
+    
     showSetting () {
         window.uiMgr.showPanel(window.macro.Name.PanelOption);
     }
@@ -11,8 +11,8 @@ export default class MainMenu extends cc.Component {
         window.uiMgr.showPanel(window.macro.Name.PanelLevelChoice);
     }
 
-    // exit the game
     quit () {
         cc.game.end();
     }
+
 }
