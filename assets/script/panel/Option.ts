@@ -4,7 +4,7 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class settingCtrl extends cc.Component {
 
-    backToMenu () {
+    close () {
         window.uiMgr.closeCurrentPanel();
     }
 }

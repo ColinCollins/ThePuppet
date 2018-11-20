@@ -1,7 +1,7 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class menuScene extends cc.Component {
+export default class MainMenu extends cc.Component {
 
     showSetting () {
         window.uiMgr.showPanel(window.macro.Name.PanelOption);
@@ -12,7 +12,7 @@ export default class menuScene extends cc.Component {
     }
 
     // exit the game
-    Quit () {
+    quit () {
         cc.game.end();
     }
 }
