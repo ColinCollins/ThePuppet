@@ -1,4 +1,4 @@
-import { PanelBase } from "./PanelBase";
+import PanelBase from "./PanelBase";
 
 const {ccclass, property} = cc._decorator;
 

@@ -1,5 +1,5 @@
-import { PanelBase } from "./PanelBase";
-import PanelStack from "../manager/PanelStack";
+import PanelBase from "./PanelBase";
+import PanelStack from "../panel/PanelStack";
 
 const {ccclass, property} = cc._decorator;
 
