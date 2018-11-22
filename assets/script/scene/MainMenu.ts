@@ -1,18 +1,28 @@
+import PanelStack from "../panel/PanelStack"
+
 const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class MainMenu extends cc.Component {
-    
-    showSetting () {
-        window.uiMgr.showPanel(window.macro.Name.PanelOption);
-    }
+
+    @property(PanelStack)
+    panelStack = null;
+
+    @property(cc.Prefab)
+    LevelChoice = null;
+
+    @property(cc.Prefab)
+    Option = null;
 
     showLevelChoice () {
-        window.uiMgr.showPanel(window.macro.Name.PanelLevelChoice);
+        this.panelStack.showPanel(this.LevelChoice, this.node);
+    }
+
+    showOption () {
+        this.panelStack.showPanel(this.Option, this.node);
     }
 
     quit () {
         cc.game.end();
     }
-
 }

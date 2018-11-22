@@ -1,9 +1,9 @@
-import GraphicsSystem from "../../util/graphicsSystem";
+import GraphicsSystem from "../util/GraphicsSystem";
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class gameManager extends cc.Component {
+export default class GameManager extends cc.Component {
 
     private canvas: cc.Node;
 

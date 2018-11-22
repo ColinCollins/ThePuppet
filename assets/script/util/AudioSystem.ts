@@ -1,14 +1,18 @@
-const {ccclass, property} = cc._decorator;
+class AudioSystem {
+    private static _instance: AudioSystem;
 
-// record all audio and effect in the different scene ?
+    private constructor () {
+        
+    }
 
-// load the asset music and make a list to play the list music.
-
-// and we need the sentence
-@ccclass
-export default class AudioSystem {
-
-    init () {
-
+    static getInstance () {
+        if (!this._instance) {
+            this._instance = new AudioSystem();
+        }
+        return this._instance;
     }
 }
+
+const audioSystem = AudioSystem.getInstance();
+
+export default audioSystem;

@@ -7,11 +7,20 @@ interface TargetAndCb {
     callback: EventCallback;
 }
 
-export default class EventManager {
+class EventSystem {
     private _events;
 
-    init () {
+    private static _instance: EventSystem;
+
+    private constructor () {
         this._events = {};
+    }
+
+    static getInstance () {
+        if (!this._instance) {
+            this._instance = new EventSystem();
+        }
+        return this._instance;
     }
 
     private _isRegistered(event: string, callback: EventCallback, target: any): boolean {
@@ -67,3 +76,7 @@ export default class EventManager {
         });
     }
 }
+
+const eventSystem = EventSystem.getInstance();
+
+export default eventSystem;

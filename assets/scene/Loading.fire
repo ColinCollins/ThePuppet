@@ -15,9 +15,6 @@
     "_children": [
       {
         "__id__": 2
-      },
-      {
-        "__id__": 14
       }
     ],
     "_tag": -1,
@@ -66,7 +63,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 13
+        "__id__": 10
       }
     ],
     "_prefab": null,
@@ -118,20 +115,18 @@
         "__id__": 4
       },
       {
-        "__id__": 8
+        "__id__": 7
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 11
+        "__id__": 9
       }
     ],
-    "_prefab": {
-      "__id__": 12
-    },
-    "_id": "d298srdnZFhKzC+JFH93Xd",
+    "_prefab": null,
+    "_id": "9c56bgIV1HVYzy509h7qVo",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -185,9 +180,7 @@
         "__id__": 6
       }
     ],
-    "_prefab": {
-      "__id__": 7
-    },
+    "_prefab": null,
     "_id": "eadyRIKERCjbsrNSarnd3U",
     "_opacity": 255,
     "_color": {
@@ -277,17 +270,6 @@
     "_originalHeight": 100
   },
   {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 3
-    },
-    "asset": {
-      "__uuid__": "46873493-6e9c-4821-bba2-951fc1c728d4"
-    },
-    "fileId": "87SoHWNPJEL4vmgBamV83I",
-    "sync": false
-  },
-  {
     "__type__": "cc.Node",
     "_name": "label",
     "_objFlags": 0,
@@ -299,12 +281,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 9
+        "__id__": 8
       }
     ],
-    "_prefab": {
-      "__id__": 10
-    },
+    "_prefab": null,
     "_id": "50Ji5A/eBEQau3ixQpgUnX",
     "_opacity": 255,
     "_color": {
@@ -346,7 +326,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 8
+      "__id__": 7
     },
     "_enabled": true,
     "_useOriginalSize": false,
@@ -362,17 +342,6 @@
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
     "_N$overflow": 0
-  },
-  {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 3
-    },
-    "asset": {
-      "__uuid__": "46873493-6e9c-4821-bba2-951fc1c728d4"
-    },
-    "fileId": "e4wxHyg4xEW5YJoFwLBU2u",
-    "sync": false
   },
   {
     "__type__": "cc.Widget",
@@ -401,17 +370,6 @@
     "_originalHeight": 0
   },
   {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 3
-    },
-    "asset": {
-      "__uuid__": "46873493-6e9c-4821-bba2-951fc1c728d4"
-    },
-    "fileId": "b7gvgPeHdPE7r/1o8AatR2",
-    "sync": false
-  },
-  {
     "__type__": "cc.Canvas",
     "_name": "",
     "_objFlags": 0,
@@ -426,95 +384,5 @@
     },
     "_fitWidth": false,
     "_fitHeight": true
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "gameRoot",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 1
-    },
-    "_children": [],
-    "_tag": -1,
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 15
-      },
-      {
-        "__id__": 16
-      }
-    ],
-    "_prefab": null,
-    "_id": "4dfs/b0WBF/J4i/0NmcccY",
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_cascadeOpacityEnabled": true,
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 1280,
-      "height": 760
-    },
-    "_rotationX": 0,
-    "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
-    "_position": {
-      "__type__": "cc.Vec2",
-      "x": 640,
-      "y": 380
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_localZOrder": 0,
-    "_globalZOrder": 0,
-    "_opacityModifyRGB": false,
-    "groupIndex": 0
-  },
-  {
-    "__type__": "3971173FYJCPoPybMQoTddY",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 14
-    },
-    "_enabled": true
-  },
-  {
-    "__type__": "cc.Widget",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 14
-    },
-    "_enabled": true,
-    "alignMode": 0,
-    "_target": null,
-    "_alignFlags": 45,
-    "_left": 0,
-    "_right": 0,
-    "_top": 0,
-    "_bottom": 0,
-    "_verticalCenter": 0,
-    "_horizontalCenter": 0,
-    "_isAbsLeft": true,
-    "_isAbsRight": true,
-    "_isAbsTop": true,
-    "_isAbsBottom": true,
-    "_isAbsHorizontalCenter": true,
-    "_isAbsVerticalCenter": true,
-    "_originalWidth": 1500,
-    "_originalHeight": 760
   }
 ]
